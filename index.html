@@ -378,11 +378,11 @@
                                         <div>
                                             <p class="alt-font text-medium margin-15px-bottom">calcule el valor de su trámite</p>
                                             <div class="form-results d-none"></div>
-                                            <input type="text" name="name" id="name" placeholder="Área total del lote (mt2)*" class="input-bg required">
-                                            <input type="email" name="email" id="email" placeholder="Área total cosntruida (mt2)*" class="input-bg required">
+                                            <input type="text" name="name" id="pcTotalArea" placeholder="Área total del lote (mt2)*" class="input-bg required">
+                                            <input type="email" name="email" id="pcFloorsArea" placeholder="Área total cosntruida (mt2)*" class="input-bg required">
                                             <div class="select-style input-bg required">
-                                                <select name="budget" id="budget" class="bg-transparent mb-0">
-                                                    <option value="">Estrato*</option>
+                                                <select name="budget" id="pcStratum" class="bg-transparent mb-0">
+                                                    <option value="" selected>Estrato*</option>
                                                     <option value="1">Estrato 1</option>
                                                     <option value="2">Estrato 2</option>
                                                     <option value="3">Estrato 3</option>
@@ -394,7 +394,7 @@
                                                 </select>
                                             </div>
                                                 <p>El valor de la licencia es:</p>
-                                                <h3>$10.000.000 COP</h3>
+                                                <h3 id="pcTotal"></h3>
                                             </div>
                                     </div>
                                 </div>
@@ -601,6 +601,8 @@
     <script type="text/javascript" src="js/theme-vendors.min.js"></script>
     <!-- setting -->
     <script type="text/javascript" src="js/main.js"></script>
+    <!-- price calculator -->
+    <script type="text/javascript" src="js/priceCalculator.js"></script>
 
 
    
