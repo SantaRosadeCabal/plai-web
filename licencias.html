@@ -94,128 +94,101 @@
 
 
  <!-- start blog section -->
- <section class="wow fadeIn half-section ">
-    <div class="container">
+  <!-- start post content section --> 
+  <section class="wow animate__fadeIn ">
+    <div class="container"> 
         <div class="row">
-            <main
-                class="col-12 col-lg-9 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom pl-0 md-no-padding-right">
-                <div class="">
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- start portfolio section -->
-         
-           
-                        <ul class="hover-option4 portfolio-wrapper grid grid-loading grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-medium">
-                            <li class="grid-sizer"></li>
-                            <!-- start post item -->
-                            <li class="2023 grid-item wow animate__fadeInUp">
-                                <div class="blog-post blog-post-style2 margin-70px-bottom lg-margin-50px-bottom md-margin-30px-bottom xs-margin-15px-bottom">
-                                    <div class="post-details">
-                                        <span class="text-extra-small text-medium-gray text-uppercase d-block margin-10px-bottom md-margin-5px-bottom">10 may 2023</span>
-                                        <span class="text-large alt-font w-90 lg-w-100 margin-15px-bottom d-block"><a href="#" class="text-extra-dark-gray">RAD. No. 180</a></span>
-                                        <p class="w-90 sm-margin-15px-bottom sm-w-100">KR 9 BIS No. 70 MZ D LOTE 22</p>
-                                        <span class="text-medium-gray text-uppercase text-extra-small">En trámite</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- end post item -->
-                            
-                           
-                            
+            <div class="blog-content">
+                
+                <div
+                    class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase text-big ">
+                    <span>Consultar</span></div>
+                <div class="d-inline-block">
+                    <form>
+                                                        
+                        <input type="text"
+                            class="bg-transparent text-small border-color-extra-light-gray medium-input float-left"
+                            placeholder="Digite el N° de Resolución" id="buscaNumero">
+                        <br>
+                        <button class="btn btn-small dropdown-toggle btn-light-gray" type="button" id="anio" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seleccione año
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="anio">
+                            <li><a class="dropdown-item" href="">2023</a></li>
+                            <li><a class="dropdown-item" href="#">2022</a></li>
+                            <li><a class="dropdown-item" href="#">2021</a></li>
+                            <li><a class="dropdown-item" href="#">2020</a></li>
                         </ul>
-      
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-    </div>
-
-</main>
-<aside class="col-12 col-lg-3 float-right">
-
-
-    <div class="margin-45px-bottom sm-margin-25px-bottom">
-        <div
-            class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title">
-            <span>Consultar</span></div>
-        <div class="d-inline-block width-100">
-            <form>
-                <div class="position-relative">
-                    <input type="text"
-                        class="bg-transparent text-small border-color-extra-light-gray medium-input float-left"
-                        placeholder="Digite el No. de Resolución">
-                    <button type="submit"class="btn btn-small btn-dark-gray lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto">Consultar</button>
+                        <button class="btn btn-small dropdown-toggle btn-light-gray" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seleccione estrato
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" href="#">Acción1</a></li>
+                            <li><a class="dropdown-item" href="#">Otra acción1</a></li>
+                            <li><a class="dropdown-item" href="#">Algo más aqui1</a></li>
+                        </ul>
+                        <button class="btn btn-small dropdown-toggle btn-light-gray" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seleccione tipo de vivienda
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                            <li><a class="dropdown-item" href="#">Acción1</a></li>
+                            <li><a class="dropdown-item" href="#">Otra acción1</a></li>
+                            <li><a class="dropdown-item" href="#">Algo más aqui1</a></li>
+                        </ul>
+                        <button class="btn btn-small dropdown-toggle btn-light-gray" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seleccione N° pisos
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                            <li><a class="dropdown-item" href="#">Acción1</a></li>
+                            <li><a class="dropdown-item" href="#">Otra acción1</a></li>
+                            <li><a class="dropdown-item" href="#">Algo más aqui1</a></li>
+                        </ul>
+                        <button class="btn btn-small dropdown-toggle btn-light-gray" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seleccione tipo de suelo
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+                            <li><a class="dropdown-item" href="#">Acción1</a></li>
+                            <li><a class="dropdown-item" href="#">Otra acción1</a></li>
+                            <li><a class="dropdown-item" href="#">Algo más aqui1</a></li>
+                        </ul>
+                        
+                        
+                        </br></br>
+                        <button id="filtrar" onclick="filtrarResolucion()" class="btn btn-large btn-violet lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto">Filtrar</button>
+                        
+                        
+                        
+                    </form>
                     
                 </div>
-            </form>
+                    
+                
+
+                <ol id="licencias" class="blog-text blog-wrapper grid grid-loading grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large">
+                    <li class="grid-sizer "></li>
+                    <!-- start post item -->
+                    <li class="grid-item wow animate__fadeInUp ">
+                        <div class="blog-post blog-post-style7 border border-color-light-gray padding-fourteen-all lg-padding-ten-all sm-padding-30px-all bg-light-gray">
+                            <div class="post-details">
+                                <span class="text-extra-small text-uppercase d-block margin-four-bottom md-margin-two-bottom">17 july 2017</span>
+                                <span class="text-large alt-font margin-50px-bottom md-margin-30px-bottom d-block"><a href="blog-post-layout-01.html">Design can speak the tongue of art with the force of commerce.</a></span>
+                                <div class="author padding-10px-top position-relative">
+                                    <span class="text-uppercase text-extra-small">by <a href="javascript:void(0);">Herman Miller</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- end post item -->                    
+                    
+                </ol>
+                
+            </div>
+            
+            
         </div>
     </div>
-
-
-
-    <div class="margin-45px-bottom sm-margin-25px-bottom">
-        <div
-            class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title">
-            <span>Licencias por año</span></div>
-        <ul class="portfolio-filter list-style-6 margin-20px-bottom text-small">
-            <li><a href="javascript:void(0);" data-filter="*">TODO</a><span>1</span></li>
-            <li><a href="javascript:void(0);" data-filter=".2023">2023</a><span>01</span></li>
-            
-        </ul>
-    </div>
-
-
-</aside>
-</div>
-</div>
 </section>
-<!-- end blog section -->
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-
+<!-- end blog content section -->
 
 
   <!-- start footer --> 
@@ -243,25 +216,6 @@
 </footer>
 <!-- end footer --> 
        
-       
-       
-       
-       
-       
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- start scroll to top -->
         <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
         <!-- end scroll to top  -->
@@ -273,5 +227,7 @@
         <script type="text/javascript" src="js/theme-vendors.min.js"></script>
         <!-- setting -->
         <script type="text/javascript" src="js/main.js"></script>
+        <!-- Script Hector Mesa / Filtrado-->
+        <script type="text/javascript" src="js/scriptlicencias.js"></script>
     </body>
 </html>
