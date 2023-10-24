@@ -99,7 +99,7 @@
   <section>
     <div class="container">
         <div class="row justify-content-center">
-            <main class="col-12 col-xl-9 col-lg-8 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom">
+            <main id="licenseContainerHidden" class="col-12 col-xl-9 col-lg-8 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom" style="display: none;">
                 <!-- start post item --> 
                 <div class="blog-post-content d-flex align-items-center flex-wrap margin-60px-bottom padding-60px-bottom border-bottom border-color-extra-light-gray md-margin-30px-bottom md-padding-30px-bottom text-center text-md-start md-no-border">
                     <div class="col-12 col-lg-5 blog-image p-0 md-margin-30px-bottom sm-margin-20px-bottom margin-45px-right md-no-margin-right">
@@ -1093,20 +1093,27 @@
 
 
                 
-                <!-- start pagination -->
+                
+            </main>
+            <main class="col-12 col-xl-9 col-lg-8 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom">
+                <div id="licenseContainer"></div>
+                <div>
+                    <!-- start pagination -->
                 <div class="col-12 text-center margin-100px-top md-margin-50px-top wow animate__fadeInUp">
                     <div class="pagination text-small text-uppercase text-extra-dark-gray">
-                        <ul class="mx-auto">
-                            <li><a href="#"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> << </a></li>
+                        <ul id="pagination" class="mx-auto">
+                            <li><a href="#" id="paginationPrev"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> << </a></li>
                             <li class="active"><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
-                            <li><a href="#"> >> <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a></li>
+                            <li><a href="#" id="paginationPost"> >> <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- end pagination -->
+                </div>
             </main>
+            
             <aside class="col-12 col-lg-3 float-right">
                         <div class="margin-45px-bottom sm-margin-25px-bottom">
                             <div class="bg-deep-pink padding-30px-all text-white-2 text-center margin-45px-bottom sm-margin-25px-bottom">
@@ -1179,5 +1186,71 @@
         <script type="text/javascript" src="js/main.js"></script>
         <!-- Script Hector Mesa / Filtrado-->
         <script type="text/javascript" src="js/scriptlicencias.js"></script>
+        <script>
+            const drawLicenses = (start, end) => {
+                console.log(start, end);
+                let counter = start;
+                licenseContainer.innerHTML = '';
+                console.log('50:',licenseContainerHidden.children[50]);
+                while (counter < end) {
+                    try {
+                        const clone = licenseContainerHidden.children[counter].cloneNode(true);
+                        licenseContainer.appendChild(clone);
+                        counter ++;  
+                    } catch (error) {
+                        break;
+                    }
+                }
+            };
+            const clearPagination = () => {
+                let counter = 0;
+                while (true) {
+                    try {
+                        pagination.children[counter].classList.remove('active');
+                        counter ++;
+                    } catch (error) {
+                        break;
+                    }
+                }
+            };
+
+            const maxLicensesPerPage = 5;
+            const licenseContainerHidden = document.getElementById('licenseContainerHidden');
+            const licenseContainer = document.getElementById('licenseContainer');
+            const pagination = document.getElementById('pagination');
+            const licenseCount = licenseContainerHidden.children.length;
+            let offset = 0;
+
+            //pagination.innerHTML = '<li><a href="#" id="paginationPrev"><i class="fas fa-long-arrow-alt-left margin-5px-right d-none d-md-inline-block"></i> << </a></li>';
+            pagination.innerHTML = '';
+            for (let i = 1; i < Math.ceil(licenseCount/maxLicensesPerPage)+1; i++) {
+                if (i == 1) {
+                    pagination.innerHTML += '<li class="active"><a href="#">'+i.toString()+'</a></li>';
+                } else {
+                    pagination.innerHTML += '<li><a href="#">'+i.toString()+'</a></li>';
+                }
+            }
+            //pagination.innerHTML += '<li><a href="#" id="paginationPost"> >> <i class="fas fa-long-arrow-alt-right margin-5px-left d-none d-md-inline-block"></i></a></li>';
+
+            //const paginationPrev = document.getElementById('paginationPrev');
+            //const paginationPost = document.getElementById('paginationPost');
+
+            drawLicenses(offset, maxLicensesPerPage+offset);
+
+            pagination.addEventListener('click', (e) => {
+                e.preventDefault();
+                /*
+                if (e.target == paginationPrev) {
+                    console.log('previo');
+                } else if (e.target == paginationPost) {
+                    console.log('siguiente');
+                } 
+                */
+                offset = (parseInt(e.target.innerHTML) - 1) * maxLicensesPerPage;
+                drawLicenses(offset, maxLicensesPerPage+offset);
+                clearPagination()
+                pagination.children[parseInt(e.target.innerHTML)-1].classList.add('active');
+            });
+        </script>
     </body>
 </html>
