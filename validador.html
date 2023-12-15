@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es-CO">
+  <head>
+    <!-- title -->
+    <title>Plai – Plataforma de atención inteigente</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/bootsnav.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/theme-vendors.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="header-with-topbar">
+      <!-- topbar -->
+      <div class="top-header-area bg-azul padding-5px-tb">
+        <div class="container-lg">
+          <div class="row align-items-center m-0">
+            <div
+              class="col-md-6 ps-lg-0 text-uppercase alt-font d-flex align-items-center justify-content-center justify-content-md-start"
+            >
+              <img style="height: 25px" src="images/govco.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end topbar -->
+      <!-- start navigation -->
+
+      <nav
+        class="navbar navbar-default bootsnav navbar-top header-light background-transparent nav-box-width navbar-expand-lg"
+      >
+        <div class="container-fluid nav-header-container">
+          <!-- start logo -->
+          <div class="col-auto ps-0">
+            <a href="index.html" title="" class="logo"
+              ><img src="images/logo.png" alt=""
+            /></a>
+            <img width="150px" src="images/ALC_MARCA_GRIS.png" alt="" />
+          </div>
+          <!-- end logo -->
+          <div class="col accordion-menu pe-0 pe-md-3">
+            <button
+              type="button"
+              class="navbar-toggler collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbar-collapse-toggle-1"
+            >
+              <span class="sr-only">toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div
+              class="navbar-collapse collapse justify-content-end"
+              id="navbar-collapse-toggle-1"
+            >
+              <ul
+                id="accordion"
+                class="nav navbar-nav no-margin alt-font text-normal"
+                data-in="animate__fadeIn"
+                data-out="animate__fadeOut"
+              >
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="porque.html">¿Por qué Blockchain?</a></li>
+                <li><a href="licencias.html">Licencias</a></li>
+                <li><a href="reporte2023.html">Reporte 2023</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-auto pe-0">
+            <a
+              class="btn btn-small btn-deep-pink lg-margin-15px-bottom d-table d-lg-inline-block md-margin-lr-auto"
+              target="_blank"
+              href="https://app.plai.gov.co/"
+              >Ingresar</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- end navigation -->
+    </header>
+    <!-- end header -->
+    <!-- start page title section -->
+    <section
+      class="wow animate__fadeIn bg-light-gray padding-50px-tb sm-padding-30px-tb page-title-small top-space"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div
+            class="col-lg-4 col-md-6 text-center text-md-start breadcrumb justify-content-center justify-content-md-start text-small alt-font"
+          >
+            <!-- start breadcrumb -->
+            <ul class="text-center text-md-start">
+              <li><a href="#" class="text-dark-gray">Inicio</a></li>
+              <li><a href="#" class="text-dark-gray">Licencias</a></li>
+              <li><a href="#" class="text-dark-gray">Validador</a></li>
+            </ul>
+            <!-- end breadcrumb -->
+          </div>
+          <div
+            class="col-lg-8 col-md-6 sm-margin-10px-top text-center text-md-end"
+          >
+            <!-- start page title -->
+            <h1 class="alt-font text-extra-dark-gray font-weight-600 mb-0">
+              Validador
+            </h1>
+            <!-- end page title -->
+            <!-- start sub title -->
+            <span class="d-block margin-5px-top alt-font">
+              Licencias Urbanísticas</span
+            >
+            <!-- end sub title -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end page title section -->
+
+    <!-- start blog section -->
+    <!-- start post content section -->
+    <section>
+      <div
+        id="dragOverview"
+        class="alert alert-primary"
+        role="alert"
+        style="
+          position: fixed;
+          bottom: -500px;
+          width: 40%;
+          margin-left: 30%;
+          text-align: center;
+        "
+      >
+        Arrastre el archivo PDF para ser analizado
+      </div>
+      <div class="container-fluid">
+        <div
+          class="row p-4 m-4 align-items-center"
+          style="background-color: hsla(268, 49%, 31%, 0.125)"
+        >
+          <div class="col">
+            <img
+              src="images/upgrade.svg"
+              alt="Subir documento"
+              style="height: 100px; width: auto"
+            />
+          </div>
+          <div class="col-8">
+            <h6>Subir licencia</h6>
+            <p>
+              Para validar la licencia, por favor cargue el archivo PDF original
+              correspondiente. Nuestro sistema procesará el documento de
+              inmediato y le proporcionará los resultados de la validación al
+              instante. También puede arrastrar y soltar el archivo en cualquier
+              sitio de esta página.
+            </p>
+          </div>
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              id="licenceFileTrigger"
+            >
+              Subir archivo
+            </button>
+            <input
+              type="file"
+              id="licenceFile"
+              name="licenceFile"
+              style="display: none"
+              accept=".pdf"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container" id="progressBar" style="display: none">
+        <div class="progress" style="height: 30px">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 100%"
+          >
+            <strong style="text-shadow: 2px 2px 5px black"
+              >Obteniendo información</strong
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          id="dangerMessage"
+          style="display: none"
+        ></div>
+      </div>
+    </section>
+    <!-- end blog content section -->
+
+    <section>
+      <div class="container-fluid">
+        <div class="row mx-4">
+          <div class="col-4 p-2">
+            <div
+              id="licenseStatusContainer"
+              class="card mb-3 text-white bg-secondary"
+            >
+              <div class="row no-gutters">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-title">Estado de la licencia</p>
+                    <h6 id="licenseStatus" class="text-white">Sin verificar</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 p-2">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-title">Dirección</p>
+                    <h6 id="licenseAddress">---</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 p-2">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div>
+                  <div class="card-body">
+                    <p class="card-title">Código catastral</p>
+                    <h6 id="licenseCatastral">---</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 p-2">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div>
+                  <div class="card-body">
+                    <p class="card-title">
+                      Código de la licencia en la Blockchain
+                    </p>
+                    <h6 id="licenseBlockchainCode">---</h6>
+                    <p class="card-text">
+                      <small class="text-muted"
+                        ><a
+                          id="licenseBlockchainCodeLink"
+                          style="display: none"
+                          href=""
+                          target="_blank"
+                          >Ver en la Blockchain</a
+                        ></small
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 p-2">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div>
+                  <div class="card-body">
+                    <p class="card-title">ID de la licencia en la Blockchain</p>
+                    <h6 id="licenseBlockchainID">---</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 p-2">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div>
+                  <div class="card-body">
+                    <p class="card-title">
+                      HASH de la licencia en la Blockchain
+                    </p>
+                    <h6 id="licenseBlockchainHASH">---</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- start footer -->
+    <footer
+      class="footer-center-logo2-dark bg-extra-dark-gray padding-five-tb sm-padding-30px-tb"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- start social media -->
+          <div
+            class="col-lg-4 col-md-5 social-style-3 text-center text-lg-start sm-margin-10px-bottom"
+          >
+            <a href="index.html"
+              ><img
+                style="height: 90px"
+                class="logo"
+                src="images/ALC_MARCA_BLA.png"
+                data-at2x="images/ALC_MARCA_BLA.png"
+                alt=""
+            /></a>
+          </div>
+          <!-- end social media -->
+          <!-- start logo -->
+          <div class="col-lg-4 col-md-2 text-center sm-margin-20px-bottom">
+            <a href="index.html"
+              ><img
+                style="height: 100px"
+                class="logo"
+                src="images/plai_blanco.png"
+                data-at2x="images/plai_blanco.png"
+                alt=""
+            /></a>
+          </div>
+          <!-- end logo -->
+          <!-- start copyright -->
+          <div
+            class="col-lg-4 col-md-5 text-center alt-font text-small font-weight-500 text-lg-end"
+          >
+            <a href="index.html"
+              ><img
+                style="height: 110px"
+                class="logo"
+                src="images/SubTic.png"
+                data-at2x="images/SubTic.png"
+                alt=""
+            /></a>
+          </div>
+          <!-- end copyright -->
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- start scroll to top -->
+    <a class="scroll-top-arrow" href="javascript:void(0);"
+      ><i class="ti-arrow-up"></i
+    ></a>
+    <!-- end scroll to top  -->
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootsnav.js"></script>
+    <script type="text/javascript" src="js/jquery.nav.js"></script>
+    <script type="text/javascript" src="js/hamburger-menu.js"></script>
+    <script type="text/javascript" src="js/theme-vendors.min.js"></script>
+    <!-- setting -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Script Hector Mesa / Filtrado-->
+    <script type="text/javascript" src="js/scriptlicencias.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.2.2/web3.min.js"></script>
+    <script>
+      const licenceFile = document.getElementById("licenceFile");
+      const licenceFileTrigger = document.getElementById("licenceFileTrigger");
+      const progressBar = document.getElementById("progressBar");
+      const dangerMessage = document.getElementById("dangerMessage");
+      const dragOverview = document.getElementById("dragOverview");
+
+      const licenseStatus = document.getElementById("licenseStatus");
+      const licenseAddress = document.getElementById("licenseAddress");
+      const licenseCatastral = document.getElementById("licenseCatastral");
+      const licenseStatusContainer = document.getElementById(
+        "licenseStatusContainer"
+      );
+
+      const licenseBlockchainCode = document.getElementById(
+        "licenseBlockchainCode"
+      );
+      const licenseBlockchainCodeLink = document.getElementById(
+        "licenseBlockchainCodeLink"
+      );
+      const licenseBlockchainID = document.getElementById(
+        "licenseBlockchainID"
+      );
+      const licenseBlockchainHASH = document.getElementById(
+        "licenseBlockchainHASH"
+      );
+
+      const getLicenceBlockchainData = async (tokenId) => {
+        const web3 = new Web3(
+          "https://polygon-mainnet.infura.io/v3/da94a8684a82471cb691b8982351e1de"
+        );
+        const contractAddress = "0x6d5AA752D8f89359896ba54CD84D600051fcdd59";
+        const contractABI = [
+          {
+            inputs: [],
+            stateMutability: "nonpayable",
+            type: "constructor",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "sender",
+                type: "address",
+              },
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+              {
+                internalType: "address",
+                name: "owner",
+                type: "address",
+              },
+            ],
+            name: "ERC721IncorrectOwner",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "operator",
+                type: "address",
+              },
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "ERC721InsufficientApproval",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "approver",
+                type: "address",
+              },
+            ],
+            name: "ERC721InvalidApprover",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "operator",
+                type: "address",
+              },
+            ],
+            name: "ERC721InvalidOperator",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "owner",
+                type: "address",
+              },
+            ],
+            name: "ERC721InvalidOwner",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "receiver",
+                type: "address",
+              },
+            ],
+            name: "ERC721InvalidReceiver",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "sender",
+                type: "address",
+              },
+            ],
+            name: "ERC721InvalidSender",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "ERC721NonexistentToken",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "owner",
+                type: "address",
+              },
+            ],
+            name: "OwnableInvalidOwner",
+            type: "error",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "account",
+                type: "address",
+              },
+            ],
+            name: "OwnableUnauthorizedAccount",
+            type: "error",
+          },
+          {
+            anonymous: false,
+            inputs: [
+              {
+                indexed: true,
+                internalType: "address",
+                name: "owner",
+                type: "address",
+              },
+              {
+                indexed: true,
+                internalType: "address",
+                name: "approved",
+                type: "address",
+              },
+              {
+                indexed: true,
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "Approval",
+            type: "event",
+          },
+          {
+            anonymous: false,
+            inputs: [
+              {
+                indexed: true,
+                internalType: "address",
+                name: "owner",
+                type: "address",
+              },
+              {
+                indexed: true,
+                internalType: "address",
+                name: "operator",
+                type: "address",
+              },
+              {
+                indexed: false,
+                internalType: "bool",
+                name: "approved",
+                type: "bool",
+              },
+            ],
+            name: "ApprovalForAll",
+            type: "event",
+          },
+          {
+            anonymous: false,
+            inputs: [
+              {
+                indexed: true,
+                internalType: "address",
+                name: "previousOwner",
+                type: "address",
+              },
+              {
+                indexed: true,
+                internalType: "address",
+                name: "newOwner",
+                type: "address",
+              },
+            ],
+            name: "OwnershipTransferred",
+            type: "event",
+          },
+          {
+            anonymous: false,
+            inputs: [
+              {
+                indexed: true,
+                internalType: "address",
+                name: "from",
+                type: "address",
+              },
+              {
+                indexed: true,
+                internalType: "address",
+                name: "to",
+                type: "address",
+              },
+              {
+                indexed: true,
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "Transfer",
+            type: "event",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "to",
+                type: "address",
+              },
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "approve",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "owner",
+                type: "address",
+              },
+            ],
+            name: "balanceOf",
+            outputs: [
+              {
+                internalType: "uint256",
+                name: "",
+                type: "uint256",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "burn",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "getApproved",
+            outputs: [
+              {
+                internalType: "address",
+                name: "",
+                type: "address",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "getLicenseInfo",
+            outputs: [
+              {
+                components: [
+                  {
+                    internalType: "string",
+                    name: "fileSHA",
+                    type: "string",
+                  },
+                  {
+                    internalType: "string",
+                    name: "licenseId",
+                    type: "string",
+                  },
+                  {
+                    internalType: "string",
+                    name: "fileCode",
+                    type: "string",
+                  },
+                ],
+                internalType: "struct PlaiLicense.LicenseInfo",
+                name: "",
+                type: "tuple",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "owner",
+                type: "address",
+              },
+              {
+                internalType: "address",
+                name: "operator",
+                type: "address",
+              },
+            ],
+            name: "isApprovedForAll",
+            outputs: [
+              {
+                internalType: "bool",
+                name: "",
+                type: "bool",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [],
+            name: "name",
+            outputs: [
+              {
+                internalType: "string",
+                name: "",
+                type: "string",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [],
+            name: "owner",
+            outputs: [
+              {
+                internalType: "address",
+                name: "",
+                type: "address",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "ownerOf",
+            outputs: [
+              {
+                internalType: "address",
+                name: "",
+                type: "address",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [],
+            name: "renounceOwnership",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "to",
+                type: "address",
+              },
+              {
+                internalType: "string",
+                name: "_fileSHA",
+                type: "string",
+              },
+              {
+                internalType: "string",
+                name: "_licenseId",
+                type: "string",
+              },
+              {
+                internalType: "string",
+                name: "_fileCode",
+                type: "string",
+              },
+            ],
+            name: "safeMint",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "from",
+                type: "address",
+              },
+              {
+                internalType: "address",
+                name: "to",
+                type: "address",
+              },
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "safeTransferFrom",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "from",
+                type: "address",
+              },
+              {
+                internalType: "address",
+                name: "to",
+                type: "address",
+              },
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+              {
+                internalType: "bytes",
+                name: "data",
+                type: "bytes",
+              },
+            ],
+            name: "safeTransferFrom",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "operator",
+                type: "address",
+              },
+              {
+                internalType: "bool",
+                name: "approved",
+                type: "bool",
+              },
+            ],
+            name: "setApprovalForAll",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "bytes4",
+                name: "interfaceId",
+                type: "bytes4",
+              },
+            ],
+            name: "supportsInterface",
+            outputs: [
+              {
+                internalType: "bool",
+                name: "",
+                type: "bool",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [],
+            name: "symbol",
+            outputs: [
+              {
+                internalType: "string",
+                name: "",
+                type: "string",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "tokenURI",
+            outputs: [
+              {
+                internalType: "string",
+                name: "",
+                type: "string",
+              },
+            ],
+            stateMutability: "view",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "from",
+                type: "address",
+              },
+              {
+                internalType: "address",
+                name: "to",
+                type: "address",
+              },
+              {
+                internalType: "uint256",
+                name: "tokenId",
+                type: "uint256",
+              },
+            ],
+            name: "transferFrom",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              {
+                internalType: "address",
+                name: "newOwner",
+                type: "address",
+              },
+            ],
+            name: "transferOwnership",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+        ];
+        const contract = new web3.eth.Contract(contractABI, contractAddress);
+        const result = await contract.methods.getLicenseInfo(tokenId).call();
+
+        licenseBlockchainCode.innerText = result.fileCode;
+        licenseBlockchainCodeLink.href = "https://polygonscan.com/nft/0x6d5aa752d8f89359896ba54cd84d600051fcdd59/"+tokenId;
+        licenseBlockchainCodeLink.style.display = "block";
+        licenseBlockchainID.innerText = result.licenseId;
+        licenseBlockchainHASH.innerText = result.fileSHA;
+      };
+
+      const getLicenceFileData = async (fileHASH) => {
+        let response = await fetch(
+          "https://api.plai.gov.co/core/file/?where=hash=" + fileHASH
+        );
+        let data = await response.json();
+        const fileData = data.body[0];
+        if (!fileData) {
+          progressBar.style.display = "none";
+          dangerMessage.innerText =
+            "El archivo dado no corresponde a una licencia almacenada en la Blockchain.";
+          dangerMessage.style.display = "block";
+          return;
+        }
+
+        response = await fetch(
+          "https://api.plai.gov.co/blockchain/procedure/?where=licenseFile=" +
+            fileData._id
+        );
+        data = await response.json();
+        const procedureData = data.body[0];
+        if (!fileData) {
+          progressBar.style.display = "none";
+          dangerMessage.innerText =
+            "El archivo dado no corresponde a una licencia almacenada en la Blockchain.";
+          dangerMessage.style.display = "block";
+          return;
+        }
+
+        licenseStatus.innerText = "Verificado";
+        licenseStatusContainer.classList.add("bg-success");
+        licenseStatusContainer.classList.remove("bg-secondary");
+        licenseAddress.innerText = procedureData.address;
+        licenseCatastral.innerText = procedureData.cadastralCode;
+
+        progressBar.style.display = "none";
+        dangerMessage.style.display = "none";
+
+        getLicenceBlockchainData(procedureData.chainTokenId);
+      };
+
+      const fileAnalyzer = (file) => {
+        progressBar.style.display = "none";
+        dangerMessage.innerText = "";
+        dangerMessage.style.display = "none";
+
+        licenseStatus.innerText = "Sin verificar";
+        licenseStatusContainer.classList.add("bg-secondary");
+        licenseStatusContainer.classList.remove("bg-success");
+        licenseAddress.innerText = "---";
+        licenseCatastral.innerText = "---";
+
+        licenseBlockchainCode.innerText = "---";
+        licenseBlockchainCodeLink.href = "#";
+        licenseBlockchainCodeLink.style.display = "none";
+        licenseBlockchainID.innerText = "---";
+        licenseBlockchainHASH.innerText = "---";
+
+        if (!file) {
+          return;
+        } else if (file.type !== "application/pdf") {
+          dangerMessage.innerText = "El archivo seleccionado debe ser un PDF.";
+          dangerMessage.style.display = "block";
+          return;
+        }
+
+        progressBar.style.display = "block";
+        const reader = new FileReader();
+        reader.onload = async function (event) {
+          const arrayBuffer = event.target.result;
+          const hashBuffer = await window.crypto.subtle.digest(
+            "SHA-512",
+            arrayBuffer
+          );
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          const hashHex = hashArray
+            .map((b) => b.toString(16).padStart(2, "0"))
+            .join("");
+          getLicenceFileData(hashHex);
+        };
+        reader.readAsArrayBuffer(file);
+      };
+
+      document.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        dragOverview.style.bottom = "0";
+      });
+
+      document.addEventListener("dragleave", (event) => {
+        event.preventDefault();
+        dragOverview.style.bottom = "-500px";
+      });
+
+      document.addEventListener("drop", (event) => {
+        event.preventDefault();
+        dragOverview.style.bottom = "-500px";
+        fileAnalyzer(event.dataTransfer.files[0]);
+      });
+
+      licenceFileTrigger.addEventListener("click", () => {
+        licenceFile.click();
+      });
+
+      licenceFile.addEventListener("change", () => {
+        fileAnalyzer(licenceFile.files[0]);
+      });
+    </script>
+  </body>
+</html>
